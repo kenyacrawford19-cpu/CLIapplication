@@ -4,6 +4,7 @@ import java.sql.SQLOutput;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 import java.util.Scanner;
 
 public class LedgerEntry {
@@ -88,5 +89,19 @@ public class LedgerEntry{
 
         }
     }
+
+    private static void showPayments() {
+
+    }
+
+    private static void showReportsMenu() {
+    }
+
+    private static void showAllEntries() {
+    }
+
+    private static void showDeposits() {
+    }
 }
+
 

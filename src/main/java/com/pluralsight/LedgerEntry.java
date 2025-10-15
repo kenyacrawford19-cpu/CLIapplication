@@ -1,5 +1,6 @@
 package com.pluralsight;
 
+import java.sql.SQLOutput;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
@@ -59,7 +60,33 @@ public class LedgerEntry{
 
 
     private static void showLedgerEntry() {
-        while (true)
+        while (true) {
+            System.out.println("\nLedger");
+            System.out.println("--------------------");
+            System.out.println("A) All Entries");
+            System.out.println("D) Deposits Only");
+            System.out.println("P) Payments Only");
+            System.out.println("R) Reports");
+            System.out.println("0) Back To Home");
+            System.out.println("-------------------");
+            System.out.println("Please select an option: ");
+
+            String choice = scanner.nextInt().trim().toUpperCase();
+            switch (choice) {
+                case "A" -> showAllEntries();
+                case "D" -> showDeposits();
+                case "P" -> showPayments();
+                case "R" -> showReportsMenu();
+                case "0" -> {
+                    System.out.println("Returning to FinancialLedger Screen...");
+                    return;
+
+                }
+                default -> System.out.println("Invalid choice. Try again.");
+
+            }
+
+        }
     }
 }
 

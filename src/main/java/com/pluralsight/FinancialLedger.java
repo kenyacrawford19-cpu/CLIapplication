@@ -124,13 +124,44 @@ public class FinancialLedger {
         }
 
     private static void showPayments() {
+        List<Financial>payments = readFinancial().stream()
 
     }
-
     private static void showReportsMenu() {
+        while (true) {
+            System.out.println("\nReports");
+            System.out.println("--------------------");
+            System.out.println("1) Month To Date");
+            System.out.println("2) Previous Month");
+            System.out.println("3) Year To Date");
+            System.out.println("4) Previous Year");
+            System.out.println("5) Search by Vendor");
+            System.out.println("0) Back to Ledger");
+            System.out.println("--------------------");
+            System.out.println("Select an option: ");
+
+            String choice = scanner.nextLine().trim();
+
+            switch (choice) {
+                case "1" -> reportMonthToDate();
+                case "2" -> reportPreviousMonth();
+                case "3" -> reportYearToDate();
+                case "4" -> reporPreviousYear();
+                case "5" -> searchByVendor();
+                case "0" -> {return; }
+                default -> System.out.println("Invalid option. Try again");
+            }
+        }
+    }
+
+    private static void reportPreviousMonth() {
+        LocalDate now = LocalDate.now();
+        List<FinancialLedger> results = readFinancialLedger().stream()
+
     }
 
     private static void showAllEntries() {
+
     }
 
     private static void showDeposits() {

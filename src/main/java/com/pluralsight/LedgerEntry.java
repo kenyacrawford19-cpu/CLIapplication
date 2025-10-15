@@ -3,6 +3,7 @@ package com.pluralsight;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
 
 public class LedgerEntry {
     //Property Variable
@@ -43,11 +44,22 @@ public class LedgerEntry {
         return String.format("%s | %s | %-20s | %-15s | %10.2f",
                 Date,Time,Description, Vendor, amount);
 
-        //DateTime Formatter
-        //DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-DD : mm:ss");
 
 
 
+
+
+    }
+}
+
+public class LedgerEntry{
+    private static final String File_Name = "transactions.csv";
+    private static final DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    private static final Scanner scanner = new Scanner(System.in);
+
+
+    private static void showLedgerEntry() {
+        while (true)
     }
 }
 

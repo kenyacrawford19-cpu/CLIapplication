@@ -23,7 +23,7 @@ public class FinancialLedger {
               System.out.println("D) Add Deposit");
               System.out.println("P) Make Payment (Debit) ");
               System.out.println("L) Ledger");
-              System.out.println("X) Exit");
+              System.out.println("X) Exiting DDSG Financial Ledger");
               System.out.println("---------------");
               System.out.println("Enter your choice: ");
               String choice = scanner.nextLine().trim().toUpperCase();

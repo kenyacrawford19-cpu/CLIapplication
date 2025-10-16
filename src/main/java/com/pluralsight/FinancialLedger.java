@@ -48,7 +48,7 @@ public class FinancialLedger {
                   break;
               case "X":
                   System.out.println("Exiting...Goodbye");
-                  break;
+                  return;
           }
       }
   }
@@ -68,6 +68,7 @@ public class FinancialLedger {
         LedgerEntry ledger = new LedgerEntry(date, time, description, vendor, amount);
         String ledgerEntry = ledger.toString();
         // write the ledgerEntry into your CSV
+        ledger.entries();
     }
 
     public void makePayment(){
@@ -85,6 +86,8 @@ public class FinancialLedger {
         LedgerEntry ledger = new LedgerEntry(date, time, description, vendor, amount);
         String ledgerEntry = ledger.toString();
         // write the ledgerEntry into your CSV
+        ledger.entries();
+
     }
 
     public void showLedgerScreen() {
@@ -124,10 +127,12 @@ public class FinancialLedger {
         }
 
     private static void showPayments() {
-        List<Financial>payments = readFinancial().stream()
+        //List<LedgerEntry>payments = FinancialLedger().stream();
 
     }
     private static void showReportsMenu() {
+        Scanner scanner = new Scanner(System.in);
+
         while (true) {
             System.out.println("\nReports");
             System.out.println("--------------------");
@@ -145,20 +150,23 @@ public class FinancialLedger {
             switch (choice) {
                 case "1" -> reportMonthToDate();
                 case "2" -> reportPreviousMonth();
-                case "3" -> reportYearToDate();
-                case "4" -> reporPreviousYear();
-                case "5" -> searchByVendor();
+                //case "3" -> reportYearToDate();
+                //case "4" -> reporPreviousYear();
+                //case "5" -> searchByVendor();
                 case "0" -> {return; }
                 default -> System.out.println("Invalid option. Try again");
             }
         }
     }
 
+    private static void reportMonthToDate() {
+    }
+
     private static void reportPreviousMonth() {
         LocalDate now = LocalDate.now();
         LocalDate prev = now.minusMonths(1);
-        List<FinancialLedger> filtered = ledger.stream()
-                .fileter(e.getLocalDate().getMonth())
+        //List<FinancialLedger> filtered = ledger.stream()
+                //.fileter(e.getLocalDate().getMonth())
 
     }
 

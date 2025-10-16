@@ -156,7 +156,9 @@ public class FinancialLedger {
 
     private static void reportPreviousMonth() {
         LocalDate now = LocalDate.now();
-        List<FinancialLedger> results = readFinancialLedger().stream()
+        LocalDate prev = now.minusMonths(1);
+        List<FinancialLedger> filtered = ledger.stream()
+                .fileter(e.getLocalDate().getMonth())
 
     }
 

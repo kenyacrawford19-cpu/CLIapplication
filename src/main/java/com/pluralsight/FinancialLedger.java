@@ -11,21 +11,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class FinancialLedger {
-    private static void reportPreviousMonth() {
-            LocalDate now = LocalDate.now();
-            LocalDate prev = now.minusMonths(1);
-            //List<FinancialLedger> filtered = ledger.stream()
-                    //.fileter(e.getLocalDate().getMonth())
-    
-        }
-
-    private static void showAllEntries() {
-    
-        }
-
-    private static void showDeposits() {
-        }
-
     public void showMainScreen(){
       Scanner scanner = new Scanner(System.in);
 
@@ -142,6 +127,7 @@ public class FinancialLedger {
         }
 
     private static void showPayments() {
+        //List<LedgerEntry>payments = FinancialLedger().stream();
 
     }
     private static void showReportsMenu() {
@@ -162,7 +148,7 @@ public class FinancialLedger {
             String choice = scanner.nextLine().trim();
 
             switch (choice) {
-                case "1" -> reportMonthTodate();
+                case "1" -> reportMonthToDate();
                 case "2" -> reportPreviousMonth();
                 //case "3" -> reportYearToDate();
                 //case "4" -> reporPreviousYear();
@@ -173,13 +159,28 @@ public class FinancialLedger {
         }
     }
 
-    private static void reportMonthTodate() {
+    private static void reportMonthToDate() {
+
+
+    }
+
+    private static void reportPreviousMonth() {
+        LocalDate now = LocalDate.now();
+        LocalDate prev = now.minusMonths(1);
+        //List<FinancialLedger> filtered = ledger.stream()
+                //.fileter(e.getLocalDate().getMonth())
+
+    }
+
+    private static void showAllEntries() {
+
+    }
+
+    private static void showDeposits() {
     }
 
     public void showReportScreen(){
-    
-        }
+
+    }
 }
-
-
 

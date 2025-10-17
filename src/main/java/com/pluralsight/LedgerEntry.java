@@ -55,12 +55,13 @@ public class LedgerEntry {
         //csv header
         String header= "Date,Time, description, vendor, amount \n";
         //ledger Entries
-        String entry = "2025-09-25, 13:15:20, Custom Basketball, DDSG, 120.00";
+        String string = "2025-09-25, 17:30:22, Light Bill Paid, Duke Energy, -347.65";
+        String entries = "2025-09-25, 13:15:20, Custom Basketball, DDSG, 120.00";
         try (FileWriter writer = new FileWriter(filename)){
             // Write header
             writer.write(header);
             //Write each entry
-                writer.write(entry + "\n");
+                writer.write(entries + "\n");
             System.out.println("Ledger saved successfully to " + filename);
             } catch (IOException e) {
                 System.err.println("Error writing to file: " + e.getMessage());

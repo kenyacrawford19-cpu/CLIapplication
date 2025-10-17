@@ -1,7 +1,7 @@
-#🫰🤑 DDSG Financial Ledger ClI Application
+#🫰🤑 DDSG Financial Ledger Cli Application
 DDSG = Double Dribble Sporting Goods
 ## 📝 Overview
-- The DDSG Financial Ledger ClI Application is a Java command-line program that helps users track deposits, payments, and run financial reports.  
+- The DDSG Financial Ledger Cli Application is a Java command-line program that helps users track deposits, payments, and run financial reports.  
 All transactions are stored in a persistent CSV file named `transactions.csv`.
 More Ideal for small personal businesses
 ## 💳Transaction Features
